@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {width: 100%;}
+
+.nav-container {
+    background: #000;
+
+    a {
+        color: white;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em;
+
+    .logo {
+        color: #f00;
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+
+        a {
+            display: block;
+            padding: 0 1em;
+        }
+    }
+}
+
+.social-header, .hero-image {
+    display: none;
+}
+
+.hero {
+    background: #222;
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 4em;
+}
+
+.meet {
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    font-weight: bold;
+    color: #039EFF;
+
+    span {
+        margin-top: 1em;
+        margin-right: .5em;
+    }
+}
+
+.scroll {
+    width: 30px;
+    margin-top: 2em;
+}
+
+section {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.featured {
+    position: relative;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #f00;
+    letter-spacing: .2em;
+    font-size: .85rem;
+}
+
+.featured-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: -0.4em;
+    display: block;
+}
+
+.featured-desc {
+    color: #252525;
+    margin-bottom: 3em;
+    font-size: .95rem;
+    line-height: 1.8em;
+    font-weight: 500;
+}
+
+.skills {
+    background: #049EFF;
+}
+
+.skills-container ul li {
+
+    background: white;
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+
+    .icon-container {
+        height: 100px;
+        display: grid;
+        place-content: center;
+        margin: 0 auto;
+    
+        &.one {
+            width: 75px;
+        }
+    
+        &.two {
+            width: 100px;
+        }
+    
+        &.three {
+            width: 75px;
+        }
+    }
+
+    .skill-title {
+        font-weight: bold;
+        color: #f00;
+    }
+    
+    .featured-desc {
+        margin-bottom: 2em;
+    }
+}
+
+.portfolio {
+    background:#f7f7f7;
+}
+
+.portfolio-container a img {
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.hero-image {
+    border-radius: 1em;
+}
+
+.contact-form, .submit-message{
+    background: #222;
+    color: white;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .submit-message {
+      color: #049EFF;
+  }
+  form {
+    width: 66%;
+    max-width: 350px;
+  }
+  .input-group {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  input, textarea {
+    font-family: 'poppins';
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #BFBFBF;
+    color: white;
+    background: transparent;
+    font-size: 15px;
+    display: block;
+    box-sizing: border-box;
+  }
+  label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: white;
+    cursor: text;
+    transition: 0.3s;
+  }
+  button {
+    padding: 10px 0;
+    color: white;
+    outline: none;
+    background: transparent;
+    border: 1px solid #BFBFBF;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 35px;
+  }
+  input:focus~label,
+  input:valid~label {
+    top: -35px;
+    font-size: 14px;
+  }
+  textarea:focus~label,
+  textarea:valid~label {
+    top: -35px;
+    font-size: 12px;
+  }
+  
+@media only screen and (min-width: 800px) {
+
+    .featured, .portfolio {
+        text-align: left;
+    }
+    .featured, .portfolio-container {
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+
+    .left, .portfolio-left {
+        display: grid;
+        place-content: center;
+    }
+
+    .right {
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+
+    .skills {
+        margin-top: -5em;
+        margin-bottom: -7em;
+        padding-top: 7em;
+    }
+
+    .skills-container ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 1em;
+    }
+
+    .portfolio {
+        padding-top: 7em;
+    }
+
+    .portfolio-container img {
+        margin-left: 2em;
+    }
+
+}
+
+@media only screen and (min-width: 1050px) {
+    .hero {
+        height: 90vh;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+
+        header {
+            background: black;
+        }
+    }
+    header {
+        padding: 2em 2em 2em 4em;
+    }
+    .social-header {
+        padding: 2em 4em 2em 0;
+    }
+    section {
+        padding: 4em;
+    }
+
+    .social-header {
+        display: block;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 7em;
+            float: right;
+
+            img {
+                width: 30px;
+            }
+        }
+    }
+
+    .submit-message, .contact-form {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+
+        h1, form {
+            background: #222;
+        }
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+        padding: 0;
+
+        .content {
+            background: #222;
+            padding: 6em 8em 6em 4em;
+            text-align: left;
+
+            h1 {
+                font-size: 3em;
+                line-height: 1.2em;
+            }
+        }
+    }
+    .meet {
+        margin: unset;
+    }
+    .hero-image {
+        display: unset;
+        margin-left: -50%;
+        margin-top: 15%;
+        width: 100%;
+    }
+
+    .portfolio img {
+        float: right;
+        max-width: 600px;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    header {
+        padding: 2em 2em 2em 10em;
+    }
+    .social-header {
+        padding: 2em 10em 2em 0;
+    }
+    section {
+        padding: 10em 10em 4em 10em;
+    }
+
+    .hero .content {
+        padding: 6em 8em 6em 10em;
+    }
+}
+
+@media only screen and (min-width: 1550px) {
+    header {
+        padding: 2em 2em 2em 20em;
+    }
+    .social-header {
+        padding: 2em 20em 2em 0;
+    }
+    section {
+        padding: 6em 20em 4em 20em;
+    }
+
+    .hero .content {
+        padding: 9em 20em 6em 20em;
+    }
+}
+
+.circle {
+    animation: circleAnim 1.2s infinite alternate-reverse;
+}
+
+@keyframes circleAnim {
+    from {
+        transform: translate(207px, 722px);
+        z-index: 5;
+    }
+    to {
+        transform: translate(207px, 760px);
+        
+    }
+}
